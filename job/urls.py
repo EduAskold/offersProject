@@ -22,7 +22,7 @@ from offers.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',adminpanel),
-    path('main',the_main),
+    path('',the_main),
+    # path('main',the_main),
     path('userpage/',user_page),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -7,7 +7,7 @@
     background: linear-gradient(88deg, rgba(97, 240, 240, 0.63) 38.85%,
     rgba(239, 231, 33, 0.57) 100%);
     width: 100%;
-    height: 294px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +25,6 @@
     align-items: center;
     padding: 10px 85px;
     gap: 10px;
-    width: 1434px;
     height: 134px;
     flex: none;
     order: 0;
@@ -34,11 +33,8 @@
 
 .left_icon{
 
-    position: absolute;
     width: 50px;
     height: 132px;
-    left: 85px;
-    top: 20px;
     background: rgba(156, 133, 133, 0.62);
     border-radius: 100%;
     font-size: 30px;
@@ -53,13 +49,20 @@
     align-items: flex-end;
     padding: 0px;
     gap: 27px;
-    padding-left: 1200px;
     height: 43px;
     flex: none;
     order: 1;
     flex-grow: 0;
 }
-
+.head_line{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+}
 .reg{
     display: flex;
     flex-direction: row;
@@ -72,7 +75,6 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin-left: 1500px;
     color: rgba(0, 0, 0, 0.452);
     border-radius: 12px;
     border: none;
@@ -149,6 +151,13 @@
     order: 2;
     flex-grow: 0;
     color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .text_p{
@@ -167,16 +176,33 @@
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.76);
 }
-
-.basis_head{
+.bottom_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.head_settings_div{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.basis_head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     padding-top: 10px;
+    padding-bottom: 10px;
     gap: 17px;
     width: 100%;
-    height: 808px;
+    min-height: 808px;
     flex: none;
+
    
 }
 
