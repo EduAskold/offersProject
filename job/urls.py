@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from adminpanel.views import *
+from job import settings
+from django.conf.urls.static import static
+from offers.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('adminpanel/',adminpanel)
-]
+    path('',adminpanel),
+    path('main',the_main),
+    path('userpage/',user_page),
+]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
