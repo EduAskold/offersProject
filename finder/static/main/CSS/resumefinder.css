@@ -259,8 +259,7 @@ border-radius: 15px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 10px;
+    padding: 10px 10px;
     width: 281px;
     height: 42px;
     left: 800px;
@@ -271,7 +270,6 @@ border-radius: 15px;
 
 .button_sity{
     width: 247px;
-    height: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -280,6 +278,8 @@ border-radius: 15px;
     text-align: center;
     letter-spacing: 0.15em;
     color: #000000;
+    background-color: transparent;
+    border: none;
     
     
 }
