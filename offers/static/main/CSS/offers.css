@@ -199,10 +199,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
     gap: 17px;
-    width: 100%;
     min-height: 808px;
     flex: none;
-
+    padding-left: 10px;
+    padding-right: 10px;
    
 }
 

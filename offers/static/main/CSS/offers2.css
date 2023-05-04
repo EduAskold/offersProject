@@ -29,6 +29,7 @@
     margin-left: 1100px;
 }
 
+
 .left_icon2{
     
     display: flex;
@@ -128,7 +129,7 @@
     width: 329px;
     height: 25px;
     flex: none;
-
+    gap: 10px;
 }
 
 .sity2{
@@ -179,7 +180,7 @@
     width: 268px;
     height: 63px;
     left: 795px;
-    top: 792px;
+    top: 890px;
     background: #1FBBDD;
     border-radius: 10px;
     flex: none;
@@ -200,3 +201,14 @@
     flex: none;
     font-size: 18px;
 }
+
+.bottom_1{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
