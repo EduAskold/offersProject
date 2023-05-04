@@ -7,5 +7,5 @@ def user(request):
 
 def resume(request):
     
-    return render(request, 'main/finder2.html')
+    return render(request, 'main/resumefinder.html')
 # Create your views here.

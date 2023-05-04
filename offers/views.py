@@ -2,18 +2,18 @@ from django.shortcuts import render
 
 def the_main(request):
     
-    return render(request, 'main/offers.html')
+    return render(request, 'main/main.html')
 
 
-def user_page(request):
+def offer_page(request):
     
-    return render(request, 'main/offers2.html')
+    return render(request, 'main/offerspage.html')
 
 def register(request):
     
-    return render(request, 'main/offers3.html')
+    return render(request, 'main/reg.html')
 
-def open(request):
+def auth(request):
     
-    return render(request, 'main/offers4.html')
+    return render(request, 'main/auth.html')
 # Create your views here.

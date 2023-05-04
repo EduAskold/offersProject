@@ -24,9 +24,9 @@ from finder.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',the_main),
-    path('userpage/',user_page),
+    path('userpage/',offer_page),
     path('register/',register),
-    path('open/',open),
+    path('open/',auth),
     path('user/',user),
     path('my_resume', resume),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
