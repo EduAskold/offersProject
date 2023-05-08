@@ -29,4 +29,6 @@ urlpatterns = [
     path('auth/',auth),
     path('user/',user),
     path('my_resume', resume),
+    path('my_reviews', reviews),
+    path('personaldata', personaldata)
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
