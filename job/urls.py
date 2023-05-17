@@ -24,7 +24,7 @@ from finder.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',the_main),
-    path('offerpage/',offer_page),
+    path('offerpage/<int:id>/',offer_page, name='offer_page'),
     path('register/',register),
     path('auth/',auth),
     path('user/',user),

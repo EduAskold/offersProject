@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .head_title{
@@ -104,11 +105,9 @@
     align-items: center;
     padding: 0px;
     gap: 40px;
+    
     width: 972px;
     height: 38px;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
     
 }
 
@@ -127,6 +126,10 @@
 }
 
 .choice_input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     letter-spacing: 6px;
     width: 166px;
     height: 38px;
@@ -138,6 +141,7 @@
     order: 1;
     flex-grow: 0;
     font-size: 15px
+    
 }
 
 .job_search{

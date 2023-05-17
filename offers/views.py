@@ -1,13 +1,18 @@
 from django.shortcuts import render
+from .models import *
 
 def the_main(request):
+    a = Offer.objects.all()
     
-    return render(request, 'main/main.html')
+
+    return render(request, 'main/main.html', {'a': a} )
 
 
-def offer_page(request):
-    
-    return render(request, 'main/offerspage.html')
+def offer_page(request, id):
+    offer = Offer.objects.get(pk = id)
+    context = {'offer': offer}
+    return render(request, 'main/offerspage.html', context=context)
+
 
 def register(request):
     

@@ -9,5 +9,5 @@ class Company(models.Model):
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
     location = models.CharField(max_length=255)
-    # user = models.ForeingKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     # Create your models here.

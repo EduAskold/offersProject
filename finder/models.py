@@ -12,5 +12,6 @@ class Finder(models.Model):
     phone = models.CharField(max_length=255)
     telegram = models.CharField(max_length= 255)
     email = models.CharField(max_length=255)
-    # user = models.ForeingKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+
 # Create your models here.

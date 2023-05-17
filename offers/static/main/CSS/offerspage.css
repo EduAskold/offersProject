@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 .head_title2{
@@ -21,12 +22,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
-    width: 365px;
-    height: 115px;
+    padding: 0px;  
+    height: 150px;
     flex: none;
     flex-grow: 0;
-    margin-left: 1100px;
+    margin-left: 1200px;
 }
 
 
@@ -66,12 +66,13 @@
     align-items: flex-end;
     padding: 0px;
     gap: 27px;
-    padding-left: 30px;
+    padding-right: 30px;
     height: 43px;
     flex: none;
     order: 1;
     flex-grow: 0;
     font-size: 20px;
+
 }
 
 
@@ -101,13 +102,18 @@
     height: 214px;
     flex: none;
     color: blue;
-    font-size: 20px;
+    
     letter-spacing: 3px;
 }
 
 .img-2{
     height: 200px;
     width: 200px;
+}
+
+.name_bas{
+    color: blue;
+font-size: 30px;
 }
 
 .money2{
@@ -176,7 +182,6 @@
     justify-content: center;
     align-items: center;
     gap: 100px;
-    position: absolute;
     width: 268px;
     height: 63px;
     left: 795px;
@@ -212,3 +217,6 @@
     
 }
 
+.additional_info{
+    font-size: 20px;
+}
