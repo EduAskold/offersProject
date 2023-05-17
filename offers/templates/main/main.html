@@ -1,100 +1,94 @@
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main/CSS/main.css' %}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'main/CSS/main.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="head_title">
-        <div class="head_line">
+      <div class="head_line">
         <p class="left_icon">JOB UA</p>
-            <div class="head_settings_div">
-                <p class="right_icon">UA | EN</p>
-                <button class="reg">Вхід</button>
-                <button class="reg">Реєстрація</button>
-            </div>
+        <div class="head_settings_div">
+          <p class="right_icon">UA | EN</p>
+          <button class="reg">Вхід</button>
+          <button class="reg">Реєстрація</button>
         </div>
+      </div>
 
-            <form action="" class="finder">
-                <a href="">Шукачу</a>
-                <a href="">Роботодавцю</a>
-                <a href="">Тренінги</a>
-            </form>
+      <form action="" class="finder">
+        <a href="">Шукачу</a>
+        <a href="">Роботодавцю</a>
+        <a href="">Тренінги</a>
+      </form>
 
-            <div action="" class="search_header">             
-                <form>
-                    <input type="text" class="search_header_input" placeholder="Пошук вакансії">
-                </form>
-                <form class="choice">
-                    <input type="text" placeholder="Вибір міста" class="choice_input">
-                </form>
-
-                <div action="">
-                    
-                    <button class="job_search"> <i class='bx bx-search-alt-2'></i>
-                        <p>
-                        Знайти вакансію
-                        </p>
-                    </button>  
-                </div>
-  
-            </div>
-
-        <form action="" class="text_p">
-            <p>23548 Вакансій</p>
-            <p>48627 Резюме</p>
+      <div action="" class="search_header">
+        <form>
+          <input
+            type="text"
+            class="search_header_input"
+            placeholder="Пошук вакансії"
+          />
         </form>
+        <form class="choice">
+          <input type="text" placeholder="Вибір міста" class="choice_input" />
+        </form>
+
+        <div action="">
+          <button class="job_search">
+            <i class="bx bx-search-alt-2"></i>
+            <p>Знайти вакансію</p>
+          </button>
+        </div>
+      </div>
+
+      <form action="" class="text_p">
+        <p>23548 Вакансій</p>
+        <p>48627 Резюме</p>
+      </form>
     </header>
 
-
     <main class="basis_head">
-        {% for offer in offers %}
-        <div class="head_pixel">
-            <img src="{% static 'main/image/index.jpg' %}" alt="" class="img-1">
-            
-              
-            <form action="">
-                <a href="/offers/{{offer.id}}/">{{offer.name}}</a>
-            </form>
-            
-            <form action="" class="p-box">
-                <p class="money">{{offer.min_selary}} - {{offer.max_selary}} грн</p>
-                <p class="sity">{{offer.location}}</p>
-                <p class="experiance">{{offer.requirements}}</p>
-                <p class="description">{{offer.description}}</p>
-            </form>
-            
-            <form action="" class="form-button">
-                <button class="save">Зберегти</button>
-                <button class="responce">Відгукнутись без резюме</button>
-            </form>
-        </div>
-        {% endfor %}   
-            
-        
-    </main>
-    
+      {% for offer in offers %}
+      <div class="head_pixel">
+        <img src="{{offer.company.photo.url}}" alt="" class="img-1" />
 
+        <form action="">
+          <a href="/offerpage/{{offer.id}}/">{{offer.name}}</a>
+        </form>
+
+        <form action="" class="p-box">
+          <p class="money">{{offer.min_selary}} - {{offer.max_selary}} грн</p>
+          <p class="sity">{{offer.location}}</p>
+          <p class="experiance">{{offer.requirements}}</p>
+          <p class="description">{{offer.description}}</p>
+        </form>
+
+        <form action="" class="form-button">
+          <button class="save">Зберегти</button>
+          <button class="responce">Відгукнутись без резюме</button>
+        </form>
+      </div>
+      {% endfor %}
+    </main>
 
     <div action="" class="bottom">
+      <form action="" class="bottom_item">
+        <i class="bx bx-phone"></i>
+        <p>Телефон Call-центр 24 /7 +380(048)158-547-58</p>
+      </form>
 
-        <form action="" class="bottom_item">
-            <i class='bx bx-phone' ></i>
-            <p>Телефон Call-центр  24 /7 +380(048)158-547-58</p>
-        </form>
-
-        <form action="" class="bottom_item">
-            <i class='bx bxl-instagram' ></i>
-            <i class='bx bxl-telegram' ></i>
-            <p>Приєднуйся в наш канал </p>
-        </form>
-
+      <form action="" class="bottom_item">
+        <i class="bx bxl-instagram"></i>
+        <i class="bx bxl-telegram"></i>
+        <p>Приєднуйся в наш канал</p>
+      </form>
     </div>
-
-
-</body>
+  </body>
 </html>

@@ -5,7 +5,7 @@ def the_main(request):
     a = Offer.objects.all()
     
 
-    return render(request, 'main/main.html', {'a': a} )
+    return render(request, 'main/main.html', {'offers': a} )
 
 
 def offer_page(request, id):

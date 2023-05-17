@@ -64,6 +64,20 @@
     flex-direction: row;
     width: 90%;
 }
+.description{
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-height: 100px; */
+    width: 100%;
+}
+.experiance{
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-height: 100px; */
+    width: 100%;
+}
 .reg{
     display: flex;
     flex-direction: row;
@@ -91,9 +105,6 @@
     gap: 50px;
     width: 523px;
     height: 42px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     letter-spacing: 8px;
     
 }

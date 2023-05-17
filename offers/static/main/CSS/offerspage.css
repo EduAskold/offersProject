@@ -85,7 +85,7 @@
     gap: 10px;
     isolation: isolate;
     width: 1415px;
-    height: 917px;
+    /* height: 917px; */
     flex: none;
 
    
@@ -152,7 +152,7 @@ font-size: 30px;
 
 .text_p{
     width: 1406px;
-    height: 498px;
+    /* height: 498px; */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
