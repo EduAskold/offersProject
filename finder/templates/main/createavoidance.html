@@ -34,7 +34,10 @@
                         <input type="text" class="input_fill_field1" placeholder="Назва вакансії" name="name">
                     </div>
                     <div class="fill_field_2">
-                        <input type="text" class="input_fill_field2" placeholder="Заробітня плата (грн)" name="min_sellary">
+                        <input type="text" class="input_fill_field2" placeholder="Заробітня плата мінімальна (грн)" name="min_sellary">
+                    </div>
+                    <div class="fill_field_2">
+                        <input type="text" class="input_fill_field2" placeholder="Заробітня плата максимальна (грн)" name="max_sellary">
                     </div>
                     <div class="fill_field_4">
                         <input type="text" class="input_fill_field4" placeholder="Місце знаходження" name="location">
@@ -42,11 +45,19 @@
                     <div class="fill_field_5">
                         <input type="text" class="input_fill_field5" placeholder="Опис вакансії" name="description">
                     </div>
-                    <div class="fill_field_6">
-                        <input type="text" class="input_fill_field6" placeholder="Контактна особа" name="surname">
+                    <div class="fill_field_5">
+                        <input type="text" class="input_fill_field5" placeholder="Вимоги до кандидата" name="requirements">
                     </div>
-                    <div class="fill_field_3">
-                        <input type="text" class="input_fill_field3" placeholder="Телефон" name="phone">
+                    <div class="fill_field_5">
+                        <input type="text" class="input_fill_field5" placeholder="Пропозиції для кандидата" name="offers">
+                    </div>
+                    <div class="fill_field_5">
+                        <select name="category" class="input_fill_field5" id="">
+                            <option disabled selected>Категорія вакансії</option>
+                            {% for category in categories %}
+                                <option value="{{category.id}}">{{category.name}}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                 <button class="button_create">Створити</button>
                 </form>

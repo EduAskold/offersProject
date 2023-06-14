@@ -69,3 +69,14 @@ def redirect_to_main(request):
 
     return redirect ('main')
 # Create your views here.
+def profileredirect(request):
+    if request.user.is_authenticated:
+        try:
+            company = Company.objects.get(user = request.user) 
+            return redirect('usercompany')
+        except:
+            # Якщо компанія не прив'зана то користувач - шукач роботи
+            return redirect('user')
+
+    else:
+        return redirect('main')

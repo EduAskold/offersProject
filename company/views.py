@@ -35,3 +35,6 @@ def createcompany(request):
             context['error'] = 'Не правильний'
     return render(request, 'main/create_company.html', context=context)
 # Create your views here.
+def usercompany(request):
+    
+    return render(request, 'main/companyaccount.html')
