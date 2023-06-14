@@ -5,7 +5,7 @@ class Company(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     count_workers = models.CharField(max_length=255)
-    photo = models.ImageField(upload_to = 'company/image/')
+    photo = models.ImageField(upload_to = 'company/image/', blank=True, null=True)
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
     location = models.CharField(max_length=255)

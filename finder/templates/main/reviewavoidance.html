@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main/CSS/finder.css' %}">
+    <link rel="stylesheet" href="{% static 'main/CSS/reviewavoidance.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="head_title2">
         <div class="p_head">
-            <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>
-            
+            <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>           
             <p class="right_icon2">Олексій Корсун</p>
             <p class="left_icon2">JOB UA</p>
             <p class="right_icon2">UA | EN</p>     
@@ -21,25 +20,29 @@
 
 
     <main class="basis_head2">
-        <div class="my_resume">
-            <a href="/my_resume" class="my_resume_p">Мої резюме</a>
-        </div>
-        <div class="create_company">
-            <a href="/create_company" class="create_company_p">Створити компанію</a>
-        </div>
-        <div class="my_reviews">
-            <a href="/my_reviews" class="my_reviews_p">Мої відгуки</a>
-        </div>
-        <div class="my_avoidance">
-            <a href="/avoidance" class="avoidance">Вакансії</a>
-        </div>
-        <div class="person_info">
-            <a href="/personaldata" class="person_info_p">Персональні дані</a>
-        </div>
-        <div class="exit">
-            <a href="/" class="exit_p">Вийти з акаунта</a>
-        </div>
+        {% for company in companys %}
+          
+        
+       <div class="reviews_van">
+            <p class="reviews_p">Мої вакансії</p>
+            <div class="reviews_wind">
+                <p class="name_res">{{company.name}}, {{company.min_sellary}} грн</p>
+                <div class="name_company">
+                    <p class="comp">Дата створення: 03 лютого 2023, 14:25</p>
+                    <div class="date_reviews">
+                        <p class="date_r">HR-менеджер {{company.sername}}, {{company.phone}}</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="div_a">
+                <a href="/" class="a_avoidance">На головну</a>     
+            </div>   
+       </div>
+
+        {% endfor %}
     </main>
+    
     
 
 

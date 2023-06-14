@@ -1,0 +1,84 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/CSS/createavoidance.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="head_title2">
+        <div class="p_head">
+            <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>
+            
+            <p class="right_icon2">Олексій Корсун</p>
+            <p class="left_icon2">JOB UA</p>
+            <p class="right_icon2">UA | EN</p>     
+        </div>
+    </header>
+
+
+    <main class="basis_head2">
+        <div class="main_frame">
+            <div class="main_frame_two">
+                <div class="main_title">
+                    <p class="p_text">Створити вакансію</p>
+                </div>
+                
+
+                <form class="fill_field" method="post">
+                {% csrf_token %}
+                    <div class="fill_field_1">
+                        <input type="text" class="input_fill_field1" placeholder="Назва вакансії" name="name">
+                    </div>
+                    <div class="fill_field_2">
+                        <input type="text" class="input_fill_field2" placeholder="Заробітня плата (грн)" name="min_sellary">
+                    </div>
+                    <div class="fill_field_4">
+                        <input type="text" class="input_fill_field4" placeholder="Місце знаходження" name="location">
+                    </div>
+                    <div class="fill_field_5">
+                        <input type="text" class="input_fill_field5" placeholder="Опис вакансії" name="description">
+                    </div>
+                    <div class="fill_field_6">
+                        <input type="text" class="input_fill_field6" placeholder="Контактна особа" name="surname">
+                    </div>
+                    <div class="fill_field_3">
+                        <input type="text" class="input_fill_field3" placeholder="Телефон" name="phone">
+                    </div>
+                <button class="button_create">Створити</button>
+                </form>
+               
+                
+                
+                <a href="/" class="a_create">На головну</a>
+
+            </div>            
+
+
+        </div>   
+            
+    </main>
+    
+
+
+    <div action="" class="bottom2">
+
+        <form action="" class="bottom_1">
+            <i class='bx bx-phone' ></i>
+            <p>Телефон Call-центр  24 /7 +380(048)158-547-58</p>
+        </form>
+
+        <form action="" class="bottom_1">
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-telegram' ></i>
+            <p>Приєднуйся в наш канал </p>
+        </form>
+
+    </div>
+
+
+</body>
+</html>

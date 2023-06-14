@@ -1,6 +1,11 @@
 {% load static %}
 <html lang="en">
 <head>
+    <script>
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +16,13 @@
 <body>
     <header class="head_title3">
         <div class="head_line3">
-        <p class="left_icon3">JOB UA</p>
-        <div class="head_settings_div3">
-            <p class="right_icon3">UA | EN</p>
-            <button class="reg3">Вхід</button>
-            <button class="reg3">Реєстрація</button>
+            <p class="left_icon3">JOB UA</p>
+            <div class="head_settings_div3">
+                <p class="right_icon3">UA | EN</p>
+                <a href="/auth/" class="reg3">Вхід</a>
+
+            </div>
         </div>
-    </div>
 
     </header>
 
@@ -28,30 +33,38 @@
                 <div class="main_title">
                     <p class="p_text">РЕЄСТРАЦІЯ НА САЙТІ</p>
                 </div>
-
-                <div class="fill_field">
+                
+                
+                <form class="fill_field" method="POST" action="">
+                    {% csrf_token %}
                     <div class="fill_field_1">
-                        <input type="text" class="input_fill_field1" placeholder="Email">
+                        <input type="email" class="input_fill_field1" placeholder="Email" name="email">
                     </div>
                     <div class="fill_field_2">
-                        <input type="text" class="input_fill_field2" placeholder="Пароль">
+                        <input type="password" class="input_fill_field2" placeholder="Пароль" name="password" maxlength="8">
+                    </div>
+                    <div class="fill_field_6">
+                        <input type="password" class="input_fill_field6" placeholder="Повтори пароль" name="repidpassword">
                     </div>
                     <div class="fill_field_3">
-                        <input type="text" class="input_fill_field3" placeholder="Ім'я">
+                        <input type="text" class="input_fill_field3" placeholder="Ім'я" name="lastname" maxlength="10">
                     </div>
                     <div class="fill_field_4">
-                        <input type="text" class="input_fill_field4" placeholder="Прізвище">
+                        <input type="text" class="input_fill_field4" placeholder="Прізвище" name="firstname" maxlength="10">
                     </div>
                     <div class="fill_field_5">
-                        <input type="text" class="input_fill_field5" placeholder="Місто">
+                        <input type="text" class="input_fill_field5" placeholder="Місто" name="location">
                     </div>
-                </div>
+
+
+                <button class="reg_a">Зареєструватись</button>    
+                </form>
+                {% if error %}
+                    <p class="error">{{error}}</p> 
+                {% endif %}  
+                         
                 
-                
-                <button class="reg_a">Зареєструватись</button>
-                
-                
-                <a href="" class="home">На головну</a>
+                <a href="/" class="home">На головну</a>
                 
             </div>            
 

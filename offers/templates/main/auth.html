@@ -14,8 +14,7 @@
         <p class="left_icon4">JOB UA</p>
         <div class="head_settings_div4">
             <p class="right_icon4">UA | EN</p>
-            <button class="reg4">Вхід</button>
-            <button class="reg4">Реєстрація</button>
+            <a href="/register/" class="reg4">Реєстрація</a>
         </div>
     </div>
 
@@ -28,18 +27,25 @@
                 <div class="main_title">
                     <p class="p_text">ВХІД НА САЙТ</p>
                 </div>
-
-                <div class="fill_field">
-                    <div class="fill_field_1">
-                        <input type="text" class="input_fill_field1" placeholder="Email">
-                    </div>
-                    <div class="fill_field_2">
-                        <input type="text" class="input_fill_field2" placeholder="Пароль">
-                    </div>
-            
-                </div>
-            <button class="open_button">Увійти</button>
-            <a href="" class="open_a">Реєстрація</a>    
+               
+                {% if user.is_authenticated %}
+                  
+                    <form class="fill_field" method="POST">
+                        {% csrf_token %}
+                        <div class="fill_field_1">
+                            <input type="email" class="input_fill_field1" placeholder="Email" name="email">
+                        </div>
+                        <div class="fill_field_2">
+                            <input type="password" class="input_fill_field2" placeholder="Пароль" name="password">
+                        </div>
+                        {% if error %}
+                        <p class="eror">{{error}}</p>
+                        {% endif %}
+                    <button class="open_button">Увійти</button>
+                    </form>
+                
+                {% endif %}
+            <a href="/register/" class="open_a">Реєстрація</a>    
                 
             </div>            
 

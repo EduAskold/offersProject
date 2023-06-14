@@ -77,32 +77,29 @@
 
 }
 
-
+.avoidance_p{
+    width: 143px;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 73px;
+    text-align: center;
+    color: #000000;
+}
 
 .basis_head2{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 0px 10px 16px;
-    gap: 23px;
-    isolation: isolate;
-
-    flex: none;
-    justify-content: center;
     align-items: center;
-
+    gap: 56px;  
+    width: 100%;
+    height: 917px;
+    padding-top: 20px;
    
 }
-.create_company{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 31px 0px;
-    width: 293px;
-    height: 55px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #C9EC3E;
-    border-radius: 15px;
-}
+
 .my_resume{
     display: flex;
     flex-direction: row;
@@ -127,15 +124,15 @@
     gap: 10px;
 
     width: 293px;
-    height: 50px;
+    height: 55px;
 
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #C9EC3E;
     border-radius: 15px;
 }
 
 .avoidance{
-    width: 141px;
-    height: 29px;
+
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -145,19 +142,8 @@
     color: #000000;
 }
 .my_resume_p{
-    width: 141px;
-    height: 29px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #000000;
-}
-.create_company_p{
-    width: 141px;
-    height: 29px;
+
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -175,13 +161,13 @@
     padding: 29px 0px 31px;
     gap: 10px;
     width: 293px;
-    height: 50px;
+    height: 55px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #C9EC3E;
     border-radius: 15px;
 
 }
 .my_reviews_p{
-    width: 134px;
+
     height: 29px;
     font-family: 'Inter';
     font-style: normal;
@@ -194,64 +180,13 @@
 
 
 
-.person_info{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 31px 0px;
-    gap: 10px;
-    width: 293px;
-    height: 50px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #C9EC3E;
-    border-radius: 15px;
-}
 
-.person_info_p{
-    width: 251px;
-    height: 29px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #000000;
-}
-
-.exit{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 31px 0px;
-    gap: 10px;
-    width: 293px;
-    height: px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #C9EC3E;
-    border-radius: 15px;
-    
-}
-.exit_p{
-    width: 188px;
-    height: 29px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #000000;
-
-
-}
 
 .bottom2{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px 74px 0px 10px;
     gap: 67px;
     width: 100%;
     height: 127px;
@@ -269,4 +204,3 @@
     gap: 10px;
     
 }
-
