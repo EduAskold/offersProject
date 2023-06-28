@@ -26,14 +26,14 @@
         
         <form action="" class="head_basis2">
             <img src="{{offer.company.photo.url}}" alt="" class="img-2">
-            <a  href="" class="name_bas">{{offer.name}}</a>
+            <p  href="" class="name_bas">{{offer.name}}</p>
         </form>
 
         <form action="" class="additional_info">
             
             <p class="money2"><i class='bx bx-money'></i>{{offer.max_selary}} грн</p>
             
-            <p class="name2"><i class='bx bx-building-house' ></i>{{offer.name}}</p>
+            <a href="/company/{{offer.company.id}}" class="name2"><i class='bx bx-building-house' ></i>{{offer.company.name}}</a>
             
             <p class="sity2"><i class='bx bxs-edit-location' ></i>{{offer.location}}</p>
         </form>

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 from django.db import IntegrityError
 from company.models import Company
+from offers.models import Offer 
 
 def createcompany(request):
     context = {}
@@ -40,7 +41,8 @@ def usercompany(request):
     
     return render(request, 'main/companyaccount.html')
 
-def maincompany(request):
-    # company = Company.objects.all()
-
-    return render(request, 'main/maincompany.html')
+def maincompany(request, id):
+    company = Company.objects.get(pk=id)
+    offers = Offer.objects.filter(company=company)
+    context = {'company': company, 'offers': offers}
+    return render(request, 'main/maincompany.html',context)

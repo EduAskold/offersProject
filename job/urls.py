@@ -40,6 +40,6 @@ urlpatterns = [
     path('create_company/', createcompany),
     path('profileredirect/', profileredirect),
     path('usercompany/', usercompany, name='usercompany'),
-    path('maincompany/', maincompany, name='maincompany'),
+    path('company/<int:id>/', maincompany, name='maincompany'),
 
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

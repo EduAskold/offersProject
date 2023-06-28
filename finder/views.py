@@ -68,6 +68,8 @@ def createavoidance(request):
     else:
         return redirect('main')
 def reviewavoidance(request):
+    user = request.user
+    company = Company.objects.get(user = user)
     
     return render(request, 'main/reviewavoidance.html')
 # Create your views here.

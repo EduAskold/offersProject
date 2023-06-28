@@ -258,6 +258,8 @@
     background: rgba(96, 96, 96, 0.81);
     flex: none;
     font-size: 18px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .bottom_1{
