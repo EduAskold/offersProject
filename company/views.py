@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.db import IntegrityError
+from company.models import Company
 
 def createcompany(request):
     context = {}
@@ -15,7 +16,7 @@ def createcompany(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
 
-        if len(phone) >= 4:
+        if len(phone) == 10:
             if people != 'number':
 
                 try:
@@ -38,3 +39,8 @@ def createcompany(request):
 def usercompany(request):
     
     return render(request, 'main/companyaccount.html')
+
+def maincompany(request):
+    # company = Company.objects.all()
+
+    return render(request, 'main/maincompany.html')

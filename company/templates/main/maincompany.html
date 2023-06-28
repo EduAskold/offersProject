@@ -1,0 +1,83 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/CSS/maincompany.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header class="head_title2">
+        <div class="p_head">
+            <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>
+            <p class="right_icon2">Олексій Корсун</p>
+            <p class="left_icon2">JOB UA</p>
+            <p class="right_icon2">UA | EN</p>     
+        </div>
+    </header>
+
+
+    <main class="basis_head2">
+        {% for company in companys %}
+          
+        
+        <div class="frame">
+            <div class="mainimg">
+                <img src="image/7.jpg" alt="" class="imgcompany">
+            </div>
+            <div class="mainname">
+                <div class="namecompany">
+                    <h1>{{company.name}}</h1>
+                    <h2>більше 1000 співробітників</h2>
+                </div>
+                <div class="emailcompany">
+                    <p class="p_2">company@ukr.net</p>
+                </div>
+            </div>
+            <div class="description">
+                <p class="p_3">{{company.description}}</p>
+            </div>
+            <div class="mainavoidance">
+                <p class="p_4">Вакансії компанії</p>
+                <div class="avoidancecompany">
+                    <p class="p_5"></p>
+                    <div class="window">
+                        <div class="datecreate">
+                            <p class="data"></p>
+                            <p class="data"></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="location">
+                <p class="p_6">Штаб-квартира, Україна, Київ, вул. Перемоги, 45</p>
+            </div>
+        </div>
+        <a href="/" class="exit">На головну</a>
+        {% endfor %}
+    </main>
+    
+
+
+    <div action="" class="bottom2">
+
+        <form action="" class="bottom_1">
+            <i class='bx bx-phone' ></i>
+            <p>Телефон Call-центр  24 / 7 +380(048)158-547-58</p>
+        </form>
+
+        <form action="" class="bottom_1">
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-telegram' ></i>
+            <p>Приєднуйся в наш канал </p>
+        </form>
+
+    </div>
+
+
+</body>
+</html>

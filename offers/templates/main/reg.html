@@ -19,7 +19,12 @@
             <p class="left_icon3">JOB UA</p>
             <div class="head_settings_div3">
                 <p class="right_icon3">UA | EN</p>
-                <a href="/auth/" class="reg3">Вхід</a>
+                {% if user.is_authenticated %}
+                <a href="/profileredirect" class="reg">Мій профіль</a>
+                {% else %}
+                <a href="/auth" class="reg">Вхід</a>
+                <a href="/create_company/" class="reg">Зареєструвати компанію</a>
+                {% endif %}
 
             </div>
         </div>

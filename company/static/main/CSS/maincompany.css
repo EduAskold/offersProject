@@ -90,6 +90,100 @@
    
 }
 
+.frame{
+    display: flex;
+    width: 1107px;
+    height: 844px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #DEDEDE; 
+
+}
+
+.imgcompany{
+    display: flex;
+    width: 387px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    border-radius: 25px; 
+}
+
+.mainname{
+    width: 836px;
+    height: 109px;
+    flex-shrink: 0; 
+    border-bottom: 1px solid #000; 
+}
+.namecompany{
+    display: inline-flex;
+    padding: 19px 80px 13px 36px;
+    align-items: center; 
+}
+.emailcompany{
+    display: flex;
+    width: 200px;
+    height: 77px;
+    padding: 35px 36px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0; 
+}
+
+.description{
+    display: flex;
+    border-bottom: 1px solid #000;
+    height: 185px;
+    padding: 27px 600px 134px 59px;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+.mainavoidance{
+    width: 849px;
+    height: 220px;
+    flex-shrink: 0; 
+    border-bottom: 1px solid #000; 
+}
+.p_4{
+    color: #000;
+    font-size: 20px;
+    font-family: Inter; 
+}
+
+
+
+.location{
+    display: flex;
+    padding: 33px 381px 33px 26px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px; 
+
+}
+
+.p_6{
+    color: #000;
+    font-size: 15px;
+    font-family: Inter; 
+}
+
+.exit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    background-color: aqua;
+    width: 100px;
+    border-radius: 10px;
+
+}
 
 
 

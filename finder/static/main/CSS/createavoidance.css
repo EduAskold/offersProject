@@ -238,7 +238,7 @@
     padding: 0px 9px;
     gap: 10px;
     width: 414px;
-    height: 115px;
+    height: 43px;
     top: 18px;
     background: rgba(255, 255, 255, 0.5);
     border: 0.5px solid #0000007a;
@@ -295,6 +295,7 @@
     background: #168ef0;
     border: 0.6px solid #000000;
     border-radius: 15px;
+    margin-top: 50px;
 }
 
 

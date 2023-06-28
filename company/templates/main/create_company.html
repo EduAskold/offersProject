@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'main/CSS/create_company.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script  src='{% static "main/CSS/company.js" %}'></script>
 </head>
 <body>
     <header class="head_title2">
@@ -28,11 +29,12 @@
                 
 
                 <form class="fill_field" method="POST">
+                
                     {% csrf_token %}
                     <div class="fill_field_1">
                         <input type="text" class="input_fill_field1" placeholder="Назва компанії" name="name">
                     </div>
-                    <div action="/form/sumbit" method="get" class="">
+                    <div action="/form/sumbit" method="get" class="logotip">
                         <label for="upload">Завантажити логотип компанії</label>
                         <input type="file" name="photo" id="upload" />
                     </div>
@@ -46,7 +48,7 @@
                         <input type="text" class="input_fill_field2" placeholder="Опис компанії" name="description">
                     </div>
                     <div class="fill_field_3">
-                        <input type="number" class="input_fill_field3" placeholder="Телефон компанії" name="phone">
+                        <input type="number" class="input_fill_field3" placeholder="Телефон компанії" name="phone" id="phone" >
                     </div>
                     <div class="fill_field_4">
                         <input type="password" class="input_fill_field4" placeholder="Пароль" name="password">
@@ -59,7 +61,7 @@
                 {% if error %}
                     <p class="error">{{error}}</p> 
                 {% endif %}  
-                
+    
                 
                 <a href="/" class="a_create">На головну</a>
 

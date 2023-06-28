@@ -44,9 +44,9 @@
     letter-spacing: 5px;
 }
 
-.right_icon4{
+.right_icon3{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-end;
     padding: 0px;
     gap: 27px;
@@ -64,7 +64,7 @@
     flex-direction: row;
     width: 90%;
 }
-.reg4{
+.reg{
     display: flex;
     flex-direction: row;
     padding: 5px;
