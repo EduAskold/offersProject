@@ -62,7 +62,7 @@
     <main class="basis_head">
       {% for offer in offers %}
       <div class="head_pixel">
-        <img src="{{offer.company.photo.url}}" alt="" class="img-1" />
+        <img src="{{offer.company.photo}}" alt="" class="img-1" />
 
         <form action="">
           <a href="/offerpage/{{offer.id}}/">{{offer.name}}</a>

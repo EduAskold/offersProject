@@ -4,6 +4,7 @@ from django.db import IntegrityError
 from company.models import Company
 from offers.models import Offer 
 from django.core.files.storage import FileSystemStorage
+from django.contrib.auth import login
 
 def createcompany(request):
     context = {}
@@ -22,25 +23,26 @@ def createcompany(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         
-        if len(phone) == 10:
-            if people != 'number':
+        # if len(phone) == 10:
+        if people != 'number':
 
-                try:
-                    user = User.objects.create_user(password=password, 
-                                                    username=email)
-                    company = Company.objects.create(name=name,
-                        count_workers=count_workers, location=location, phone=phone,
-                email=email, description=description, user=user)
-                    
-                except IntegrityError:
-                    context['error'] = 'Invalid'
-                 
-               
-            else:
-                context['error'] = 'Тільки цифри'               
+            try:
+                user = User.objects.create_user(password=password, 
+                                                username=email)
+                company = Company.objects.create(name=name,
+                    count_workers=count_workers, location=location, phone=phone,
+            email=email, description=description, user=user, photo = file_url)
+                login(request, user)
+            except IntegrityError:
+                print('hiii')
+                context['error'] = 'Invalid'
+                
+            
         else:
-            context['error'] = 'Не правильний'
-        return redirect(request, 'main/create_company.html', {'file_url': file_url})
+            context['error'] = 'Тільки цифри'               
+        # else:
+        #     context['error'] = 'Не правильний'
+        return redirect('main')
     return render(request, 'main/create_company.html', context=context)
 # Create your views here.
 def usercompany(request):
