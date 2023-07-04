@@ -71,5 +71,5 @@ def reviewavoidance(request):
     user = request.user
     company = Company.objects.get(user = user)
     
-    return render(request, 'main/reviewavoidance.html')
+    return render(request, 'main/reviewavoidance.html', {'companys': company})
 # Create your views here.

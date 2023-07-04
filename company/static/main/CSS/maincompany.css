@@ -18,6 +18,10 @@
     flex-grow: 0;
 }
 
+.avoidancecompany{
+    margin: 20px 0px 20px 0px;
+}
+
 .p_head{
     display: flex;
     flex-direction: row;
@@ -26,7 +30,7 @@
     height: 150px;
     flex: none;
     flex-grow: 0;
-    
+    width: 100%;
     
 }
 
@@ -84,9 +88,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 37px 171px; */
+    margin-top: 30px;
     gap: 36px;
-    /* height: 917px;   */
+
    
 }
 
@@ -107,42 +111,45 @@
 
 .imgcompany{
     display: flex;
-    width: 387px;
+    width: 200px;
     flex-direction: column;
     align-items: center;
     gap: 10px; 
-    border-radius: 25px; 
+    border-radius: 40px; 
 }
 
 .mainname{
-    width: 836px;
-    /* height: 109px; */
-    flex-shrink: 0; 
-    border-bottom: 1px solid #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    
+
+
 }
 .namecompany{
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 19px 80px 13px 36px;
-    align-items: center; 
+    flex-direction: column;
 }
 .emailcompany{
     display: flex;
     width: 200px;
-    /* height: 77px; */
     padding: 35px 36px;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0; 
+    font-size: 20px;
 }
 
 .description{
     display: flex;
+    flex-direction: column;
     border-bottom: 1px solid #000;
-    /* height: 185px; */
-    /* padding: 27px 600px 134px 59px; */
-    align-items: center;
-    flex-shrink: 0; 
+    font-size: 25px;
+
 }
 
 .mainavoidance{
@@ -169,6 +176,9 @@
 
 }
 
+.p_3{
+    font-size: 20px;
+}
 .p_6{
     color: #000;
     font-size: 15px;
@@ -195,7 +205,7 @@
     align-items: center;
     gap: 67px;
     width: 100%;
-    /* height: 127px; */
+    height: 127px;
     background: rgba(96, 96, 96, 0.81);
     flex: none;
     font-size: 18px;

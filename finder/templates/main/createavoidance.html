@@ -14,7 +14,7 @@
             <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>
             
             <p class="right_icon2">Олексій Корсун</p>
-            <p class="left_icon2">JOB UA</p>
+            <a href="/" class="left_icon2">JOB UA</a>
             <p class="right_icon2">UA | EN</p>     
         </div>
     </header>
@@ -29,7 +29,7 @@
                 
 
                 <form class="fill_field" method="post">
-                {% csrf_token %}
+                    {% csrf_token %}
                     <div class="fill_field_1">
                         <input type="text" class="input_fill_field1" placeholder="Назва вакансії" name="name">
                     </div>
@@ -59,7 +59,7 @@
                             {% endfor %}
                         </select>
                     </div>
-                <button class="button_create">Створити</button>
+                    <button class="button_create">Створити</button>
                 </form>
                
                 
@@ -78,7 +78,7 @@
     <div action="" class="bottom2">
 
         <form action="" class="bottom_1">
-            <i class='bx bx-phone' ></i>
+            <i class='bx bx-phone'></i>
             <p>Телефон Call-центр  24 /7 +380(048)158-547-58</p>
         </form>
 

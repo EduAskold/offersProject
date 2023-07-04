@@ -1,13 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.db import IntegrityError
 from company.models import Company
 from offers.models import Offer 
+from django.core.files.storage import FileSystemStorage
 
 def createcompany(request):
     context = {}
     string = []
-    if request.method == "POST":
+    if request.method == "POST" and request.FILES['upload']:
+        upload = request.FILES['upload']
+        fss = FileSystemStorage()
+        file = fss.save(upload.name, upload)
+        file_url = fss.url(file)
         name = request.POST.get("name")
         people = request.POST.get("people")
         location = request.POST.get("location")
@@ -16,7 +21,7 @@ def createcompany(request):
         phone = request.POST.get("phone")
         email = request.POST.get("email")
         password = request.POST.get("password")
-
+        
         if len(phone) == 10:
             if people != 'number':
 
@@ -35,6 +40,7 @@ def createcompany(request):
                 context['error'] = 'Тільки цифри'               
         else:
             context['error'] = 'Не правильний'
+        return redirect(request, 'main/create_company.html', {'file_url': file_url})
     return render(request, 'main/create_company.html', context=context)
 # Create your views here.
 def usercompany(request):
@@ -45,4 +51,4 @@ def maincompany(request, id):
     company = Company.objects.get(pk=id)
     offers = Offer.objects.filter(company=company)
     context = {'company': company, 'offers': offers}
-    return render(request, 'main/maincompany.html',context)
+    return render(request, 'main/maincompany.html', context)

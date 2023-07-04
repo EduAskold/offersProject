@@ -14,7 +14,7 @@
             <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>
             
             <p class="right_icon2">Олексій Корсун</p>
-            <p class="left_icon2">JOB UA</p>
+            <a href="/" class="left_icon2">JOB UA</a>
             <p class="right_icon2">UA | EN</p>     
         </div>
     </header>
@@ -26,7 +26,7 @@
         
         <form action="" class="head_basis2">
             <img src="{{offer.company.photo.url}}" alt="" class="img-2">
-            <p  href="" class="name_bas">{{offer.name}}</p>
+            <p class="name_bas">{{offer.name}}</p>
         </form>
 
         <form action="" class="additional_info">
@@ -48,7 +48,7 @@
                 {{offer.offers}}
             </p>
             <p>Основні обов’язки:</p>
-            <textarea>{{offer.description}}</textarea>
+            <textarea resize="none">{{offer.description}}</textarea>
             <p class="contact">Контактне лице компанії  {{offer.company.phone }}</p>
             <a href="" class="send_res">Відправити резюме</a>
         </form>

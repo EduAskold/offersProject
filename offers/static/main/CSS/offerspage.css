@@ -90,6 +90,11 @@
 
    
 }
+textarea{
+    resize: none;
+    height: 200px;
+    width: 70%;
+}
 
 .head_basis2{
     display: flex;

@@ -83,16 +83,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 0px 10px 16px;
-    gap: 23px;
+    padding: 20px 0px 10px 16px;
+    gap: 43px;
     isolation: isolate;
     margin-bottom: 84px;
     flex: none;
     justify-content: center;
     align-items: center;
 
-   
 }
+
 .create_company{
     display: flex;
     flex-direction: row;
@@ -146,7 +146,6 @@
 }
 .my_resume_p{
     width: 141px;
-    height: 29px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -171,7 +170,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 29px 0px 31px;
     gap: 10px;
     width: 293px;
@@ -253,13 +251,12 @@
     align-items: center;
     padding: 0px 74px 0px 10px;
     gap: 67px;
-    width: 100%;
     height: 127px;
     background: rgba(96, 96, 96, 0.81);
     flex: none;
     font-size: 18px;
-    position: absolute;
-    bottom: 0px;
+    margin-top: 200px;
+
 }
 
 .bottom_1{
