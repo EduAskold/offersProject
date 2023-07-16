@@ -174,7 +174,7 @@ font-size: 30px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 245px;
+
     height: 58px;
     flex: none;
     margin-left: 50px;
@@ -195,6 +195,7 @@ font-size: 30px;
     border-radius: 10px;
     flex: none;
     order: 5;
+    margin-left: 600px;
 
 }
 

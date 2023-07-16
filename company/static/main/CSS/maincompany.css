@@ -18,8 +18,16 @@
     flex-grow: 0;
 }
 
+
+
 .avoidancecompany{
     margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 17px;
 }
 
 .p_head{
@@ -29,8 +37,7 @@
     padding: 0px;  
     height: 150px;
     flex: none;
-    flex-grow: 0;
-    width: 100%;
+
     
 }
 
@@ -89,9 +96,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    gap: 36px;
+    gap: 15px;
+    margin-bottom: 30px;
 
-   
 }
 
 .frame{
@@ -148,20 +155,16 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #000;
-    font-size: 25px;
-
+    font-size: 15px;
+    width: 70%;
 }
 
-.mainavoidance{
-    width: 849px;
-    /* height: 220px; */
-    flex-shrink: 0; 
-    border-bottom: 1px solid #000; 
-}
+
 .p_4{
     color: #000;
     font-size: 20px;
     font-family: Inter; 
+
 }
 
 
@@ -173,11 +176,15 @@
     justify-content: center;
     align-items: flex-start;
     gap: 10px; 
+    border-top: 1px solid #000 ;
 
 }
 
 .p_3{
-    font-size: 20px;
+    font-size: 15px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
 }
 .p_6{
     color: #000;
@@ -191,9 +198,17 @@
     align-items: center;
     border: 1px solid #000;
     background-color: aqua;
-    width: 100px;
-    border-radius: 10px;
+    width: 130px;
+    border-radius: 50px;
+    height: 53px;
+    font-size: 20px;
+}
 
+.p-box{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -242,4 +257,8 @@ label {
 .logotip{
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+h6{
+    font-size: 25px;
 }

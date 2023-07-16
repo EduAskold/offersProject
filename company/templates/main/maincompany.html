@@ -25,54 +25,54 @@
     </header>
 
     <main class="basis_head2">
-      <div class="frame">
-        <div class="mainimg">
-          <img src="{{company.photo.url}}" alt="" class="imgcompany" />
-        </div>
-        <div class="mainname">
-          <div class="namecompany">
-            <h1>{{company.name}}</h1>
-          </div>
-          <div class="emailcompany">
-            <p class="p_2">company@ukr.net</p>
-          </div>
-        </div>
-        <div class="description">
-          <h6>Опис</h6>
-          <p class="p_3">{{company.description}}</p>
-        </div>
-        <div class="mainavoidance">
-          <p class="p_4">Вакансії компанії</p>
-          <div class="avoidancecompany">
-            {% for offer in offers %}
-            <div class="head_pixel">
-              <img src="{{offer.company.photo.url}}" alt="" class="img-1" />
 
-              <form action="">
-                <a href="/offerpage/{{offer.id}}/">{{offer.name}}</a>
-              </form>
-
-              <form action="" class="p-box">
-                <p class="money">
-                  {{offer.min_selary}} - {{offer.max_selary}} грн
-                </p>
-                <p class="sity">{{offer.location}}</p>
-                <p class="experiance">{{offer.requirements}}</p>
-                <p class="description">{{offer.description}}</p>
-              </form>
-
-              <form action="" class="form-button">
-                <button class="save">Зберегти</button>
-                <button class="responce">Відгукнутись без резюме</button>
-              </form>
-            </div>
-            {% endfor %}
-          </div>
+      <div class="mainimg">
+        <img src="{{company.photo}}" alt="" class="imgcompany" />
+      </div>
+      <div class="mainname">
+        <div class="namecompany">
+          <h1>{{company.name}}</h1>
         </div>
-        <div class="location">
-          <p class="p_6">Штаб-квартира, Україна, Київ, вул. Перемоги, 45</p>
+        <div class="emailcompany">
+          <p class="p_2">company@ukr.net</p>
         </div>
       </div>
+      <div class="description">
+        <h6>Опис</h6>
+        <p class="p_3">{{company.description}}</p>
+      </div>
+      <div class="mainavoidance">
+        <p class="p_4">Вакансії компанії</p>
+        <div class="avoidancecompany">
+          {% for offer in offers %}
+          <div class="head_pixel">
+            <img src="{{offer.company.photo}}" alt="" class="img-1" />
+
+            <form action="">
+              <a href="/offerpage/{{offer.id}}/">{{offer.name}}</a>
+            </form>
+
+            <form action="" class="p-box">
+              <p class="money">
+                {{offer.min_selary}} - {{offer.max_selary}} грн
+              </p>
+              <p class="sity">{{offer.location}}</p>
+              <p class="experiance">{{offer.requirements}}</p>
+              <p class="description1">{{offer.description}}</p>
+            </form>
+
+            <form action="" class="form-button">
+              <button class="save">Зберегти</button>
+              <button class="responce">Відгукнутись без резюме</button>
+            </form>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="location">
+        <p class="p_6">Штаб-квартира, Україна, Київ, вул. Перемоги, 45</p>
+      </div>
+
       <a href="/" class="exit">На головну</a>
     </main>
 

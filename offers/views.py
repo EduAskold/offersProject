@@ -80,3 +80,4 @@ def profileredirect(request):
 
     else:
         return redirect('main')
+    
