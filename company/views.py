@@ -46,8 +46,16 @@ def createcompany(request):
     return render(request, 'main/create_company.html', context=context)
 # Create your views here.
 def usercompany(request):
-    
-    return render(request, 'main/companyaccount.html')
+    if request.user.is_authenticated:
+        try:
+            company = Company.objects.get(user = request.user)
+            offers = Offer.objects.filter(company = company)
+            context = {'offers': offers}
+        except:
+            return redirect('main')
+        return render(request, 'main/companyaccount.html')
+    else:
+        return redirect('main')
 
 def maincompany(request, id):
     company = Company.objects.get(pk=id)
