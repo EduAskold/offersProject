@@ -229,6 +229,7 @@
     font-size: 15px;
     letter-spacing: 3px;
     margin-bottom: 10px;
+    overflow-x: hidden;
 }
 .input_fill_field5{
     box-sizing: border-box;
@@ -246,6 +247,7 @@
     font-size: 15px;
     letter-spacing: 3px;
     margin-bottom: 10px;
+    overflow-x: hidden;
 }
 
 .input_fill_field6{
@@ -265,6 +267,7 @@
     font-size: 15px;
     letter-spacing: 3px;
     margin-bottom: 10px;
+    overflow-x: hidden;
 }
 
 .button_create{

@@ -77,3 +77,7 @@ def reviewavoidance(request):
 
     return render(request, 'main/reviewavoidance.html', context=context)
 # Create your views here.
+
+def companyaccount(request):
+    
+    return render(request, 'main/companyaccount.html')

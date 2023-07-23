@@ -53,9 +53,9 @@ def usercompany(request):
             context = {'offers': offers}
         except:
             return redirect('main')
-        return render(request, 'main/reviewavoidance2.html', context=context)
+        return render(request, 'main/reviewavoidance.html', context)
     else:
-        return redirect('main', context)
+        return redirect('main')
 
 def maincompany(request, id):
     company = Company.objects.get(pk=id)

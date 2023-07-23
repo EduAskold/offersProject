@@ -41,6 +41,7 @@ urlpatterns = [
     path('profileredirect/', profileredirect),
     path('usercompany/', usercompany, name='usercompany'),
     path('company/<int:id>/', maincompany, name='maincompany'),
+    path('companyaccount/', companyaccount),
 
 
 
