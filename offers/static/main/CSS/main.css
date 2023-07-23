@@ -74,6 +74,7 @@
 .experiance{
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 
 }
 .reg{
@@ -189,7 +190,7 @@ option{
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-    width: 1650px;
+    width: 100%;
     height: 30px;
     flex: none;
     order: 3;

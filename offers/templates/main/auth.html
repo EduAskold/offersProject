@@ -1,30 +1,10 @@
+{% extends "main/base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main/CSS/auth.css' %}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="head_title4">
-        <div class="head_line4">
-            <a href="/" class="left_icon4">JOB UA</a>
-        <div class="head_settings_div4">
-            <p class="right_icon4">UA | EN</p>
-            {% if user.is_authenticated %}
-            <a href="/profileredirect" class="reg">Мій профіль</a>
-            {% else %}
-
-            <a href="/register/" class="reg">Реєстрація</a>
-            <a href="/create_company/" class="reg">Зареєструвати компанію</a>
-            {% endif %}
-        </div>
-    </div>
-
-    </header>
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/CSS/auth.css' %}">
+<link rel="stylesheet" href="{% static 'main/CSS/reg.css' %}">
+{% endblock %}
+{% block content %}
 
 
     <main class="basis_head4">
@@ -59,24 +39,4 @@
         </div>   
             
     </main>
-    
-
-
-    <div action="" class="bottom4">
-
-        <form action="" class="bottom_item4">
-            <i class='bx bx-phone' ></i>
-            <p>Телефон Call-центр  24 /7 +380(048)158-547-58</p>
-        </form>
-
-        <form action="" class="bottom_item4">
-            <i class='bx bxl-instagram' ></i>
-            <i class='bx bxl-telegram' ></i>
-            <p>Приєднуйся в наш канал </p>
-        </form>
-
-    </div>
-
-
-</body>
-</html>
+{% endblock %}
