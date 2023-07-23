@@ -47,13 +47,8 @@ def createcompany(request):
 # Create your views here.
 def usercompany(request):
     if request.user.is_authenticated:
-        try:
-            company = Company.objects.get(user = request.user)
-            offers = Offer.objects.filter(company = company)
-            context = {'offers': offers}
-        except:
-            return redirect('main')
-        return render(request, 'main/reviewavoidance2.html', context=context)
+        
+        return render(request, 'main/companyaccount.html',)
     else:
         return redirect('main', context)
 
@@ -62,3 +57,13 @@ def maincompany(request, id):
     offers = Offer.objects.filter(company=company)
     context = {'company': company, 'offers': offers}
     return render(request, 'main/maincompany.html', context)
+
+def reviewavoidance(request):
+    try:
+        company = Company.objects.get(user = request.user)
+        offers = Offer.objects.filter(company = company)
+        context = {'offers': offers}
+    except:
+        return redirect('main')
+    context = {'comoany': company, 'offers': offers}
+    return render(request, 'main/reviewavoidance2.html', context=context)

@@ -47,7 +47,7 @@
 
 .left_icon2{
 
-    position: absolute;
+    /* position: absolute; */
     width: 50px;
     height: 132px;
     left: 85px;
@@ -81,10 +81,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 0px 10px 16px;
+    /* padding: 10px 0px 10px 16px; */
     gap: 10px;
     isolation: isolate;
-    width: 1415px;
+    /* width: 1415px; */
+    width: 100%;
     /* height: 917px; */
     flex: none;
 
@@ -155,8 +156,8 @@ font-size: 30px;
 
 }
 
-.text_p{
-    width: 1406px;
+.text_p1{
+    width: 90%;
     /* height: 498px; */
     font-family: 'Inter';
     font-style: normal;
@@ -165,6 +166,7 @@ font-size: 30px;
     line-height: 30px;
     color: #000000;
     flex: none;
+    padding-left: 100px;
 
 }
 
@@ -189,13 +191,13 @@ font-size: 30px;
     gap: 100px;
     width: 268px;
     height: 63px;
-    left: 795px;
+    /* left: 795px; */
     top: 890px;
     background: #1FBBDD;
     border-radius: 10px;
     flex: none;
     order: 5;
-    margin-left: 600px;
+    /* margin-left: 600px; */
 
 }
 
@@ -225,4 +227,5 @@ font-size: 30px;
 
 .additional_info{
     font-size: 20px;
+    padding-left: 100px;
 }

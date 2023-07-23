@@ -1,37 +1,11 @@
+{% extends "main/base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <script>
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
-        }
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main/CSS/reg.css' %}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="head_title3">
-        <div class="head_line3">
-            <a href="/" class="left_icon3">JOB UA</a>
-            <div class="head_settings_div3">
-                <p class="right_icon3">UA | EN</p>
-                {% if user.is_authenticated %}
-                <a href="/profileredirect" class="reg">Мій профіль</a>
-                {% else %}
-                <a href="/auth" class="reg">Вхід</a>
-                <a href="/create_company/" class="reg">Зареєструвати компанію</a>
-                {% endif %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/CSS/reg.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
 
-            </div>
-        </div>
-
-    </header>
-
-
+{% block content %}
     <main class="basis_head3">
         <div class="main_frame">
             <div class="main_frame_two">
@@ -78,23 +52,4 @@
             
     </main>
     
-
-
-    <div action="" class="bottom3">
-
-        <form action="" class="bottom_item3">
-            <i class='bx bx-phone' ></i>
-            <p>Телефон Call-центр  24 /7 +380(048)158-547-58</p>
-        </form>
-
-        <form action="" class="bottom_item3">
-            <i class='bx bxl-instagram' ></i>
-            <i class='bx bxl-telegram' ></i>
-            <p>Приєднуйся в наш канал </p>
-        </form>
-
-    </div>
-
-
-</body>
-</html>
+{% endblock %}

@@ -1,86 +1,9 @@
+{% extends "main/base.html" %}
 {% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main/CSS/main.css' %}" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="head_title">
-      <div class="head_line">
-        <p class="left_icon">JOB UA</p>
-        <div class="head_settings_div">
-          <p class="right_icon">UA | EN</p>
-          {% if user.is_authenticated %}
-            <a href="/profileredirect" class="reg">Мій профіль</a>
-          {% else %}
-            <a href="/auth" class="reg">Вхід</a>
-            <a href="/register/" class="reg">Реєстрація</a>
-            <a href="/create_company/" class="reg">Зареєструвати компанію</a>
-          {% endif %}
-        </div>
-      </div>
-
-      <form action="" class="finder">
-        <a href="https://1viza.com/vacancies/">За кордоном</a>
-        <a href="https://ukr.media/world/372584/">Факт про роботу</a>
-        <a href="https://www.education.ua/trainings/">Тренінги</a>
-      </form>
-
-      <div action="" class="search_header">
-        <form>
-          <input
-            type="text"
-            class="search_header_input"
-            placeholder="Пошук вакансії"
-          />
-        </form>
-        <form method="post" class="choice">
-
-          <select name=“sitys”>
-            <!-- <input type="text" placeholder="Вибір міста" class="choice_input" /> -->
-            <option value="Київ" selected>Київ</option>
-            <option value="Суми">Суми</option>
-            <option value="Харків">Харків</option>
-            <option value="Житомир">Житомир</option>
-            <option value="Дніпро">Дніпро</option>
-            <option value="Донецьк">Донецьк</option>
-            <option value="Крим">Крим</option>
-            <option value="Луцьк">Луцьк</option>
-            <option value="Тернопіль">Тернопіль</option>
-            <option value="Херсон">Херсон</option>
-            <option value="Івано-Франківськ">Івано-Франківськ</option>
-            <option value="Чернігів">Чернігів</option>
-            <option value="Одесса">Одесса</option>
-            <option value="Запоріжжя">Запоріжжя</option>
-            <option value="Черкаси">Черкаси</option>
-            <option value="Львів">Львів</option>
-            <option value="Миколаїв">Миколаїв</option>
-            <option value="Полтава">Полтава</option>
-          </select>
-        </form>
-        
-          
-        <div action="">
-          <button class="job_search">
-            <i class="bx bx-search-alt-2"></i>
-            <p>Знайти вакансію</p>
-          </button>
-        </div>
-      </div>
-
-      <form action="" class="text_p">
-        <p>23548 Вакансій</p>
-        <p>48627 Резюме</p>
-      </form>
-    </header>
-
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/CSS/reg.css' %}">
+ {% endblock %}
+{% block content %}
     <main class="basis_head">
       {% for offer in offers %}
       <div class="head_pixel">
@@ -104,18 +27,5 @@
       </div>
       {% endfor %}
     </main>
+{% endblock %}
 
-    <div action="" class="bottom">
-      <form action="" class="bottom_item">
-        <i class="bx bx-phone"></i>
-        <p>Телефон Call-центр 24 /7 +380(048)158-547-58</p>
-      </form>
-
-      <form action="" class="bottom_item">
-        <i class="bx bxl-instagram"></i>
-        <i class="bx bxl-telegram"></i>
-        <p>Приєднуйся в наш канал</p>
-      </form>
-    </div>
-  </body>
-</html>

@@ -20,17 +20,17 @@
 
 
     <main class="basis_head2">
-    {% for company in companys %}
+    {% for offer in offers %}
           
         
        <div class="reviews_van">
             <p class="reviews_p">Мої вакансії</p>
             <div class="reviews_wind">
-                <p class="name_res">{{company.name}}, {{company.min_sellary}} грн</p>
+                <p class="name_res">{{offer.name}}, {{offer.min_selary}} грн</p>
                 <div class="name_company">
                     <p class="comp">Дата створення: 03 лютого 2023, 14:25</p>
                     <div class="date_reviews">
-                        <p class="date_r">HR-менеджер {{company.sername}}, {{company.phone}}</p>
+                        <p class="date_r">HR-менеджер {{offer.surname}}, {{offer.phone}}</p>
                     </div>
                 </div>
             </div>
