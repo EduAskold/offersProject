@@ -1,24 +1,12 @@
+{% extends "main/base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main/CSS/personaldata.css' %}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="head_title2">
-        <div class="p_head">
-            <p class="right_icon2">Ваші повідомлення<i class='bx bx-message-dots' ></i></p>           
-            <p class="right_icon2">Олексій Корсун</p>
-            <a href="/" class="left_icon2">JOB UA</a>
-            <p class="right_icon2">UA | EN</p>     
-        </div>
-    </header>
 
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/CSS/personaldata.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
 
+{% block content %}
     <main class="basis_head2">
        <div class="reviews_van">
             <p class="reviews_p">Особисті дані</p>
@@ -76,24 +64,5 @@
        </div>
 
     </main>
-    
+{% endblock %}
 
-
-    <div action="" class="bottom2">
-
-        <form action="" class="bottom_1">
-            <i class='bx bx-phone' ></i>
-            <p>Телефон Call-центр  24 /7 +380(048)158-547-58</p>
-        </form>
-
-        <form action="" class="bottom_1">
-            <i class='bx bxl-instagram' ></i>
-            <i class='bx bxl-telegram' ></i>
-            <p>Приєднуйся в наш канал </p>
-        </form>
-
-    </div>
-
-
-</body>
-</html>

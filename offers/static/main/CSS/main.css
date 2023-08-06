@@ -190,7 +190,7 @@ option{
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-    width: 100%;
+    width: 88%;
     height: 30px;
     flex: none;
     order: 3;
@@ -337,7 +337,7 @@ h1{
     align-items: center;
     padding: 0px 74px 0px 10px;
     gap: 67px;
-    width: 100%px;
+    width: 100%;
     height: 127px;
     background: rgba(96, 96, 96, 0.81);
     flex: none;
